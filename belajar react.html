@@ -17,12 +17,318 @@
 // bar = "React Uncover";
 // console.log(bar); // React Uncover
 
-const foo = "JavaScript";
-const bar = "React";
 
-console.log("Belajar " + foo + " dan " + bar); // Belajar JavaScript dan React
+//TEMPLATE STRING(2.10)
+// const foo = "Laravel";
+// const bar = "Flutter";
 
-console.log(`Belajar ${foo} dan ${bar}`); // Belajar JavaScript dan React
+// console.log("Belajar " + foo + " dan " + bar); // Belajar JavaScript dan React
+
+// console.log(`Belajar ${foo} dan ${bar}`); // Belajar JavaScript dan React
+
+
+// console.log('10 tambah 7 adalah ${10 + 7}');
+
+// function kuadrat(a) {
+//     return a*a;
+// }
+
+// console.log('5 kuadrat adalah ${kuadrat(5)}');
+// console.log('11 kuadrat adalah ${kuadrat(11)}');
+
+
+//CONDITIONAL OPRATOR
+
+// const user = "Admin";
+// const result = (user == "Admin") ? "Welcome, admin" : "User not found";
+
+// console.log(result);
+
+//Short-Circuit Conditionals
+// let user ="Ravael";
+// let password = "qwerty";
+
+// if ((user ==="Admin") && (password ==="qwerty")){
+//     console.log("Welcome, admin")//hasilnya tidak akan keluar
+// }
+
+//ARROW NOTATION(2.11)
+
+// const kuadrat = (a) => {
+// return a*a;
+// }
+// console.log(kuadrat(9)); // 25
+
+//menghsilkan angka acak
+
+// const generateRandom = () => Math.floor(Math.random() * 10) + 1;
+// console.log(generateRandom()); // angka acak 1-10
+
+// const generateRandom = (start = 1, end = 10) =>
+// Math.floor(Math.random() * (end - start + 1)) + start;
+
+// console.log(generateRandom());
+// console.log(generateRandom(5));
+// console.log(generateRandom(10, 20));
+
+//Function Sebagai First-Class Citizens
+
+// function total (a, b, cari) {
+// return cari(a, b);
+// }
+
+// function tambah (x, y) {
+// return x + y
+// }
+
+// console.log( total(10,10,tambah) ) // 20
+
+//memproses object
+
+// let mahasiswa = {
+//     nama:"Eka",
+//     umur:19,
+//     jurusan:"RPL",
+// getInfo(){
+//     return '${this.nama} ($this.umur) tahun dari jurusan ${this.jurusan}';
+// }
+// }
+
+// console.log(mahasiswa);
+// mahasiswa.umur=20;
+// mahasiswa.tempatLahir ="Jakarta";
+
+// console.log(mahsiswa);
+
+//object method
+
+// let mahasiswa = {
+//     nama:"Eka",
+//     umur:19,
+//     jurusan:"RPL",
+// }
+
+// console.log (Object.keys(mahasiswa)  );
+// console.log (Object.values(mahasiswa)  );
+
+// console.log (Object.entries(mahasiswa)  );
+
+
+//Array dan object destructuring(2.12)
+
+// let mahasiswa =["Ravael","Eurisko","Hezki"];
+// let [a,b,c] = mahasiswa;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+
+// let mahasiswa = {
+// nama: "Matthew",
+// umur: 16,
+// jurusan: "RPL",
+// };
+// let {nama, umur} = mahasiswa;
+// console.log(nama);
+// console.log(umur);
+
+
+// const dataMahasiswa = () => {
+// return {nama: "Berkat", umur: 19, jurusan: "Teknik Informatika"}
+// }
+
+// let {nama, umur} = dataMahasiswa();
+
+// console.log(nama); // Berkat
+// console.log(umur); // 19
+
+
+// const dataMahasiswa = () => {
+// return {nama: "Eka", umur: 19, jurusan: "Teknik Informatika"}
+// }
+
+// let {nama: namaMahasiswa, umur: umurMahasiswa} = dataMahasiswa();
+
+// console.log(namaMahasiswa); // Eka
+// console.log(umurMahasiswa); // 19
+
+//Spread Oprator(2.13)
+
+// let mahasiswa = {
+// nama: "Eka",
+// umur: 19,
+// jurusan: "Teknik Informatika"
+// };
+
+// let mahasiswa1 = {
+// ...mahasiswa,
+// umur: 20,
+// tempatLahir: "Jakarta"
+// }
+
+// console.log(mahasiswa1);
+
+// let arr1 = [10, 20, 30];
+// let arr2 = [100, 200, 300];
+
+// let arr3 = [...arr1,...arr2]
+// console.log(arr3); // [10, 20, 30, 100, 200, 300]
+
+// let arr4 = [...arr1, 40, 50]
+// console.log(arr4); // [10, 20, 30, 40, 50]
+
+// let arr5 = [30, 40, 50, ...arr1]
+// console.log(arr5); // [30, 40, 50, 10, 20, 30]
+
+
+// {nama: "Eka", umur: 20, jurusan: "Teknik Informatika",
+// tempatLahir: "Jakarta"}
+
+
+//rest parameter
+// function foo(...args) {
+// return args;
+// }
+
+
+// console.log( foo(1, 2, 3) ) // [1, 2, 3]
+// console.log( foo(3, 5, 7, 9) ) // [3, 5, 7, 9]
+// console.log( foo(5, 10, 15, 20, 25, 30 ) ) // [5, 10, 15, 20, 25, 30]
+
+// function tambah(...args) {
+// let total = 0;
+// for (let angka of args) {
+// total += angka;
+// }
+// return total;
+// }
+// console.log( tambah(1, 2, 3) ) // 6
+// console.log( tambah(3, 5, 7, 9) ) // 24
+// console.log( tambah(5, 10, 15, 20, 25, 30 ) ) // 105
+
+//Array Method: forEach() dan map()
+// let arr = [10,20,30,40];
+
+// arr.forEach(
+// (val, key) => console.log(`Nilai array di index-${key} adalah ${val}`)
+// );
+
+
+
+// let arr = [10,20,30,40];
+// arrKuadrat = [];
+
+// arr.forEach( (val) => arrKuadrat.push(val*val) );
+
+// console.log(arrKuadrat); // [100, 400, 900, 1600]
+
+
+//Asynchronous(berurutan) JS (2.14)
+
+// const getUser = () =>"Ravael";
+
+// console.log("Start...");
+// console.log(getUser());
+// console.log("Finish"); //gagal unfinded
+
+
+
+// const getUser =() =>{
+//     setTimeout(()=>{
+//         console.log("processing done!");
+//         return "Ravael";
+//     },2000)
+// }
+// console.log("Start...");
+// console.log(getUser());
+// console.log("Finish");
+
+// const getUser = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() =>{
+//             // resolve("Ravael");
+//             reject("Ada yang marah...");
+//         },2000)
+//     })
+// }
+
+// const tryGetName = async () => {
+//     let userName = await getUser();
+//     console.log("userName");
+// };
+
+// console.log("start...");
+// tryGetName();
+// console.log("Finish")
+
+// const getUser = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() =>{
+//             resolve("Ravael");
+//             reject("Ada yang marah...");
+//         },2000)
+//     })
+// }
+
+// const tryGetName = async () => {
+//     let userName = await getUser();
+//     console.log("userName");
+// };
+
+// console.log("start...");
+// tryGetName();
+// console.log("Finish")
+
+
+// Javascript module(2.15)
 </script>
 </body>
 </html>
+
+
+<!-- //FINAL BAB 2.13// -->
+
+<!-- <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>React Uncover</title>
+</head>
+<body>
+<h1>Belajar JavaScript (ES6)</h1>
+<div id="root"></div>
+<button onclick="renderData()">Tampilkan Data Mahasiswa</button>
+<script>
+const mahasiswas = [
+{
+nama: "Ravael",
+umur: 16,
+jurusan: "RPL"
+},
+{
+nama: "Okky",
+umur: 17,
+jurusan: "DKV 2"
+},
+
+{
+nama: "Damar",
+umur: 16,
+jurusan: "TP"
+}
+];
+
+const prosesMahasiswa = (mahasiswa) =>
+`<p>${mahasiswa.nama} (${mahasiswa.umur} tahun) -
+<i>${mahasiswa.jurusan}</i></p>`;
+
+const formatMahasiswas = mahasiswas.map(prosesMahasiswa);
+
+const renderData = () => {
+document.getElementById('root').innerHTML = formatMahasiswas.join("");
+}
+</script>
+</body>
+</html> -->
