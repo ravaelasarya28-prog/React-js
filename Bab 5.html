@@ -1,0 +1,266 @@
+BAB 5
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 5</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.js"></script>
+    <script type="text/babel">
+
+// class JudulReact extends React.Component {
+// render() {
+// return <h1>Sedang Belajar React</h1>;
+// }
+// }
+// ReactDOM.render(<JudulReact />, document.getElementById('root'));
+
+//Multiple Component
+
+// class JudulReact extends React.Component {
+// render() {
+// return <h1>Sedang Belajar React</h1>;
+// }
+// }
+// class JudulJavaScript extends React.Component {
+// render() {
+// return <h1>Sedang Belajar JavaScript</h1>;
+// }
+// }
+// const MyElement = (
+// <div>
+// <JudulReact/>
+// <hr/>
+// <JudulJavaScript/>
+// </div>
+// );
+// ReactDOM.render(MyElement, document.getElementById('root'));
+
+
+//NESTED COMPONENT
+// class JudulReact extends React.Component {
+// render() {
+// return <h1>Sedang Belajar React</h1>;
+// }
+// }
+// class JudulJavaScript extends React.Component {
+// render() {
+// return <h1>Sedang Belajar JavaScript</h1>;
+// }
+// }
+// class MyComponent extends React.Component {
+// render() {
+// return (
+// <div>
+// <JudulReact />
+// <hr />
+// <JudulJavaScript />
+// </div>
+// )
+// }
+// };
+// ReactDOM.render(<MyComponent />, document.getElementById('root'));
+
+
+//MEMBUAT FUNCTIONAL COMPONENT(5.4)
+
+// function JudulReact() {
+// return <h1>Sedang Belajar React</h1>;
+// }
+// function JudulJavaScript() {
+// return <h1>Sedang Belajar JavaScript</h1>;
+// }
+// function MyComponent() {
+// return (
+// <div>
+// <JudulReact />
+// <hr />
+// <JudulJavaScript />
+// </div>
+// )
+// }
+// ReactDOM.render(<MyComponent />, document.getElementById('root'));
+
+//ARROW NOTATION
+
+// const JudulReact = () => <h1>Sedang Belajar bisnis</h1>;
+// const JudulJavaScript = () => <h1>Sedang Belajar JavaScript</h1>;
+// const MyComponent = () => {
+// return (
+// <div>
+// <JudulReact />
+// <hr />
+// <JudulJavaScript />
+// </div>
+// )
+// }
+// ReactDOM.render(<MyComponent />, document.getElementById('root'));
+
+
+//Gabungan class dan function component(5.5)
+
+// class JudulReact extends React.Component {
+// render() {
+// return <h1>Sedang Belajar React</h1>;
+// }
+// }
+// const JudulJavaScript = () => <h1>Sedang Belajar JavaScript</h1>;
+// const MyComponent = () => {
+// return (
+// <div>
+// <JudulReact />
+// <hr />
+// <JudulJavaScript />
+// </div>
+
+// )
+// }
+// ReactDOM.render(<MyComponent />, document.getElementById('root'));
+
+
+//Menambah Property dan Method di Class Component(5.6. )
+
+
+// class MyComponent extends React.Component {
+// constructor() {
+// super();
+// this.judulReact = "Belajar React";
+// }
+// judulHurufKecil() {
+// return this.judulReact.toLocaleLowerCase();
+// }
+// render() {
+// return (
+// <React.Fragment>
+// <h1>{this.judulReact}</h1>
+// <hr />
+// <p>Stt... lagi serius {this.judulHurufKecil()}</p>
+// </React.Fragment>
+// )
+// }
+// }
+// ReactDOM.render(<MyComponent />, document.getElementById('root'));
+
+
+//Menampilkan Data dengan Class Component(5.7)
+// const mahasiswa = {
+// id: "01",
+// nama: "Landak",
+// jurusan: "mamalia",
+// pasFoto: "landak.jpg"
+// };
+// class Mahasiswa extends React.Component {
+// render() {
+// return (
+// <figure>
+// <img src={"" + mahasiswa.pasFoto} alt={mahasiswa.nama} />
+// <figcaption>{mahasiswa.nama} ({mahasiswa.jurusan})</figcaption>
+// </figure>
+// )
+// }
+// }
+// ReactDOM.render(<Mahasiswa />, document.getElementById('root'));
+
+
+
+
+// const mahasiswas =[
+//     {
+//         id:"01",
+//         nama:"Landak",
+//         jenis: "mamalia",
+//         pasFoto:"pyhton.jpg"
+//     },
+//     {
+//         id:"02",
+//         nama:"Landak",
+//         jenis:"mamalia",
+//         pasFoto:"js.jpg"
+//     },
+//     {
+//         id:"03",
+//         nama:"Landak",
+//         jenis:"mamalia",
+//         pasFoto:"php.jpg"
+//     }
+// ];
+
+// class DaftarMahasiswa extends React.Component {
+// render() {
+// return (
+// <React.Fragment>
+// <h1>Daftar Mahasiswa - Universitas Ilkoom</h1>
+// <hr />
+// <section style={{display: "flex", textAlign: "center"}}>
+// {
+// mahasiswas.map( (mahasiswa) =>
+// <figure key={mahasiswa.id}>
+// <img src={""+ mahasiswa.pasFoto} alt={mahasiswa.nama} />
+// <figcaption>{mahasiswa.nama} ({mahasiswa.jenis})</figcaption>
+// </figure>
+// )
+// }
+// </section>
+// </React.Fragment>
+// )
+// }
+// }
+// ReactDOM.render(<DaftarMahasiswa />, document.getElementById('root'));
+
+//Memecah Class Componenet (5.8 &5.9)
+const mahasiswas = [
+{
+id: "01",
+nama: "Eka",
+jurusan: "Teknik Informatika",
+pasFoto: "people1.jpg"
+},
+{
+id: "02",
+ nama: "Lisa",
+jurusan: "Sistem Informasi",
+pasFoto: "people2.jpg"
+},
+{
+id: "03",
+nama: "Rudi",
+jurusan: "Teknik Elektro",
+pasFoto: "people3.jpg"
+}
+];
+class Mahasiswa extends React.Component {
+render() {
+return (
+mahasiswas.map((mahasiswa) =>
+<figure key={mahasiswa.id}>
+<img src={"img/" + mahasiswa.pasFoto} alt={mahasiswa.nama} />
+<figcaption>{mahasiswa.nama} ({mahasiswa.jurusan})</figcaption>
+</figure>
+)
+)
+}
+}
+class DaftarMahasiswa extends React.Component {
+render() {
+return (
+<React.Fragment>
+<h1>Daftar Mahasiswa - Teknik Informatika</h1>
+<hr />
+<section style={{ display: "flex", textAlign: "center" }}>
+<Mahasiswa />
+</section>
+</React.Fragment>
+)
+}
+}
+ReactDOM.render(<DaftarMahasiswa />, document.getElementById('root'));
+</script>
+</body>
+</html>
