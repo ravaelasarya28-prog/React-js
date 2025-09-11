@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.js"></script>
+    <script type="text/babel">
+ //... kode JavaScript + React disini
+
+        // const myElement = <h1 id='judul'>Hello React</h1>;
+        // console.log(myElement);
+        // ReactDOM.render(myElement, document.getElementById('root'));
+
+//         const myElement = (
+// <ul>
+
+// <li><a href="https://id.wikipedia.org/wiki/Espreso">Espresso</a></li>
+// <li><a href="https://id.wikipedia.org/wiki/Kapucino">Cappuccino</a></li>
+// <li><a href="https://id.wikipedia.org/wiki/Moka">Moccacino</a></li>
+// </ul>
+// )
+// ReactDOM.render(myElement, document.getElementById('root'));
+
+// ATURAN DASAR PENULISAN JSX (4.3)
+
+// Seperti contoh yang kita praktekkan, JSX bukanlah sebuah string sehingga jangan tambah
+// tanda kutip di awal dan di akhir:
+// const myElement = "<h1 id='judul'>Hello React</h1>"; // salah
+// const myElement = <h1 id='judul'>Hello React</h1>; // benar
+
+
+// Jika kode JSX lebih dari 1 baris, tempatkan di dalam tanda kurung " ( ) ":
+// ini akan error
+// const myElement =
+// <ul>
+// <li><a href="https://id.wikipedia.org/wiki/Espresoa">Espresso</a></li>
+// <li><a href="https://id.wikipedia.org/wiki/Kapucinoa">Cappuccino</a></li>
+// <li><a href="https://id.wikipedia.org/wiki/Mokaa">Moccacino</a></li>
+// </ul>
+
+// benar
+// const myElement = (
+// <ul>
+// <li><a href="https://id.wikipedia.org/wiki/Espresoa">Espresso</a></li>
+// <li><a href="https://id.wikipedia.org/wiki/Kapucinoa">Cappuccino</a></li>
+// <li><a href="https://id.wikipedia.org/wiki/Mokaa">Moccacino</a></li>
+// </ul>
+// )
+
+// const myElement = <img src="img/landak.jpg" >; // ini akan error
+// const myElement = <img src="img/landak.jpg" />; // benar
+
+// hanya bisa 1 root element, ini akan error
+// const myElement = (
+// <p>Belajar JavaScript</p>
+// <p>Belajar React</p>
+// );
+
+//solusi nya tambahkan satu tag <div>
+// const myElement = (
+//     <div>
+// <p>Belajar JavaScript</p>
+// <p>Belajar React</p>
+// </div>
+// );
+
+//React fragment
+// const myElement = (
+//     <div>
+        
+//         <p>Belajar Javascript</p>
+//         <p>Belajar react</p>
+//         </div>
+// );
+
+// ReactDOM.render(myElement, document.getElementById('root'));
+
+// const myElement = <h1 class="judul">Belajar React</h1>; // ini akan error
+
+// const myElement = <h1 className="judul">Belajar React</h1>; // benar
+
+
+// const myElement = (
+// <div>
+// <label for="username">Username: </label> // ini akan error
+// <input type="text" name="username" id="username" />
+// </div>
+// );
+
+
+// const myElement = (
+// <div>
+// <label htmlFor="username">Username: </label> // benar
+// <input type="text" name="username" id="username" />
+// </div>
+// );
+
+
+// const myElement = (
+// <div>
+// <label for="username">Username: </label>
+// <input type="text" name="username" id="username" />
+// </div>
+// );
+// ReactDOM.render(myElement, document.getElementById('root'));
+
+//SATEMENT DALAM JSX (4.4)
+
+// let myText="Belajar React";
+
+// const myElement = (
+// <div>
+// <h1>{myText}</h1>
+// <p>10 + 5 = {10 + 5}</p>
+// <span title={myText}>React Uncover</span>
+// </div>
+// );
+
+// ReactDOM.render(myElement, document.getElementById('root'));
+
+//PENULISAN ATRIBUT STYLE(4.5)
+
+// const myElement =
+// <h1 style={{ color: 'violet', backgroundColor: 'black' }}>Jangan lelah mencintai Indonesia</h1>;
+
+// ReactDOM.render(myElement, document.getElementById('root'));
+
+
+//PERCABANGAN KONDISI(4.6)
+// let nilai =70;
+// let pesan;
+// if (nilai>70){
+//     pesan= "Selamat anda jadi DPR";
+// }
+// else{
+//     pesan= "Maaf,silahkan bayar lagi";
+// }
+
+// const myElement = <h1>{pesan}</h1>;
+
+// ReactDOM.render(myElement, document.getElementById('root'));
+
+//Dengan jsx
+
+// let nilai = 80;
+// const myElement =
+// <h1>{(nilai > 70) ? "Selamat, anda lolos": "Maaf, silahkan coba lagi"}</h1>;
+
+// ReactDOM.render(myElement, document.getElementById('root'));
+
+//ARRAY PROCESSING (4.7)
+// let kopis = ["Espresso","Cappuccino","Moccacino"];
+// const myElement = (
+// <ul>
+// {kopis.map((kopi ,i)=> <li key={i}>{kopi}</li>)}
+// </ul>
+// );
+// ReactDOM.render(myElement, document.getElementById('root'));
+
+//JAVASCRIPT EVENT (4.7)
+
+const onClickHandler = () => alert("Tombol di klik");
+
+const myElement = (
+<button onClick={onClickHandler}>
+Click me !
+</button>
+);
+
+ReactDOM.render(myElement, document.getElementById('root'));
+
+
+     </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUGAS BAB 4</title>
+    <style>
+        table,th,td{
+            border: 2px solid black;
+        }
+        th,td{
+            padding: 0.6rem 0.6rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.js"></script>
+    <script type="text/babel">
+
+        const mahasiswas = [
+            {
+                nama : "Ravael",
+                umur : 16,
+                jurusan : "RPL"
+            },
+            {
+                nama : "Randy",
+                umur : 17,
+                jurusan : "RPL"
+            },
+            {
+                nama : "Okky",
+                umur : 17,
+                jurusan : "DKV 2"
+            },
+            {
+                nama : "Dwika",
+                umur : 16,
+                jurusan : "TP"
+            }
+        ];
+    </script>
+
+    <h1>DATA SISWA BN</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Jurusan</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ravael</td>
+                <td>16</td>
+                <td>RPL</td>
+            </tr>
+            <tr>
+                <td>Randy</td>
+                <td>17</td>
+                <td>RPL</td>
+            </tr>
+            <tr>
+                <td>Okky</td>
+                <td>17</td>
+                <td>RPL</td>
+            </tr>
+            <tr>
+                <td>Dwika</td>
+                <td>16</td>
+                <td>TP</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
